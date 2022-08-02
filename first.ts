@@ -49,5 +49,27 @@ function add(a:number,b:number):number{
 //way two
 const sub = (a:number,b:number):number =>  a-b;
 
+const mul = (a:number,b:number):number =>{
+     return a*b 
+};
 
+//optional parameter
+function adds(a:number,b:number,c?:number):number{
+    return a+b;
+}
+
+//required parameter
+function addq(a:number,b:number, c=10):number{
+    return a+b+c;
+}
+
+//rest parameters
+function addr(a:number,b:number,...c:number[]):number{
+    return a+b+c.reduce(( acc, num) => acc + num);
+}
+
+let numbers = [1,2,3]
+
+console.log(addr(2,3,...numbers))
 console.log(sub(4,1))
+console.log(mul(4,1))

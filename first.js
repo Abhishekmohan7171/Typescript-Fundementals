@@ -31,4 +31,22 @@ function add(a, b) {
 }
 //way two
 const sub = (a, b) => a - b;
+const mul = (a, b) => {
+    return a * b;
+};
+//optional parameter
+function adds(a, b, c) {
+    return a + b;
+}
+//required parameter
+function addq(a, b, c = 10) {
+    return a + b + c;
+}
+//rest parameters
+function addr(a, b, ...c) {
+    return a + b + c.reduce((acc, num) => acc + num);
+}
+let numbers = [1, 2, 3];
+console.log(addr(2, 3, ...numbers));
 console.log(sub(4, 1));
+console.log(mul(4, 1));
